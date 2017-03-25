@@ -64,3 +64,9 @@ def computing(maybeFoo: Option[Foo2], a: Int, b: Int): Option[Int] = {
     mBar <- mBar.getBaz
   } yield mBar.compute(a, b)
 }
+
+// playing with the Scala Option
+//Some("Hello").flatMap(w => Some(w + " World")) // Some(Hello World)
+//Some("Hello").map(x => Some(x + " World"))   // Some(Some(...))
+// *** flatMap == map + flatten ***
+//Some("Hello").map(x => Some(x + " World")).flatten  // Some(Hello World)
