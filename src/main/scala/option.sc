@@ -70,3 +70,22 @@ def computing(maybeFoo: Option[Foo2], a: Int, b: Int): Option[Int] = {
 //Some("Hello").map(x => Some(x + " World"))   // Some(Some(...))
 // *** flatMap == map + flatten ***
 //Some("Hello").map(x => Some(x + " World")).flatten  // Some(Hello World)
+
+//val l = List(Some(1), Some(2), None)
+//val r = l.flatMap(x => x.toList) // List(1,2)
+//
+////val o = Some(List("a", "b", "c"))
+//val o = None
+//val q = o.toList.flatten // List[Nothing] = List()
+//
+//
+//Option(List(1,2,3).filter(x => x > 10))
+//
+//List(None, None, None).flatMap(x => x.toList) match {
+//  case x :: xs => Some(xs)
+//  case _ => None
+//}
+//
+//val v : Option[List[Option[Int]]] = Some(List(Some(1),Some(2))) // Some(List(Some(1), Some(2)))
+//v.toList.flatMap(x => x.collect{case Some(c) => c}).sum   // 3
+//v.map(x => x.collect{case Some(c) => c})   // Some(List(1,2))
